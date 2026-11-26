@@ -1,111 +1,114 @@
-/* ==========================================================
-   POLISH LAYER, paste at the END of your existing custom CSS.
-   No colors, fonts, spacing or layout are changed.
-   ========================================================== */
-
-/* --- Global smoothness --- */
 html { scroll-behavior: smooth; }
-body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
-h1, h2, h3, h4 { text-wrap: balance; }
-p { text-wrap: pretty; }
-section[id], [id].s_title { scroll-margin-top: 80px; }
 
-/* --- Stop image zoom from spilling outside its box --- */
-.s_text_image, .s_image_text, .s_image_text_overlap,
-.s_cards_grid .card, .s_images_wall .card, .s_three_columns .card {
-    img { backface-visibility: hidden; }
-}
-.s_text_image .img-fluid, .s_image_text .img-fluid,
-.s_image_text img, .s_text_image img {
-    border-radius: inherit;
-}
-.s_cards_grid .card, .s_images_wall .card { overflow: hidden; }
-
-/* --- Performance hints for animated elements --- */
-.s_cards_grid .card, .s_three_columns .card, .s_features .card,
-.s_images_wall .card, .s_timeline_card, .s_striped .bg-white, .btn {
-    will-change: transform;
+:root {
+  --green: #1c4b24;
+  --green-light: #eaf2eb;
+  --gold: #f0bd58;
+  --text: #1f2933;
+  --muted: #667085;
+  --white: #ffffff;
+  --border: #dfe5df;
 }
 
-/* --- Button press feedback (all buttons) --- */
-.btn {
-    transition: transform var(--ai-dur-fast) var(--ai-ease),
-                box-shadow var(--ai-dur-fast) var(--ai-ease),
-                filter var(--ai-dur-fast) var(--ai-ease);
-}
-.btn:active { transform: translateY(0) scale(0.98); }
+* { box-sizing: border-box; }
 
-/* --- Link underline slide-in (inherits the link's own color) --- */
-.s_text_image p a, .s_image_text p a, .s_hours_and_place a:not(.btn) {
-    background-image: linear-gradient(currentColor, currentColor);
-    background-size: 0% 1px;
-    background-position: 0 100%;
-    background-repeat: no-repeat;
-    text-decoration: none;
-    transition: background-size var(--ai-dur) var(--ai-ease);
-}
-.s_text_image p a:hover, .s_image_text p a:hover,
-.s_hours_and_place a:not(.btn):hover { background-size: 100% 1px; }
-
-/* --- Keyboard focus ring (uses current text color, so no new color) --- */
-a:focus-visible, .btn:focus-visible, .form-control:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 3px;
-    transition: outline-offset var(--ai-dur-fast) var(--ai-ease);
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--white);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
 }
 
-/* --- Scroll-reveal: sections fade up as they enter the screen.
-       Progressive enhancement: browsers without support just show content normally. --- */
-@keyframes ai-reveal {
-    from { opacity: 0; transform: translateY(28px); }
-    to   { opacity: 1; transform: none; }
-}
-@supports (animation-timeline: view()) {
-    .s_banner .row > *,
-    .s_numbers .col-6,
-    .s_text_image .row > *,
-    .s_image_text .row > *,
-    .s_cards_grid .card,
-    .s_three_columns .card,
-    .s_features .card,
-    .s_striped .bg-white,
-    .s_timeline_card,
-    .s_big_number .col-md-4,
-    .s_images_wall .card,
-    .s_hours_and_place .col-lg-4,
-    .s_motto blockquote {
-        animation: ai-reveal linear both;
-        animation-timeline: view();
-        animation-range: entry 0% entry 35%;
-    }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--green);
 }
 
-/* --- Gentle floating shimmer on the hero badge (no color change) --- */
-@keyframes ai-float {
-    0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(-3px); }
-}
-.s_banner .badge, .s_title .badge { animation: ai-float 4s ease-in-out infinite; }
-
-/* --- Form inputs: smoother feel --- */
-.s_website_form_bold .form-control,
-.s_website_form_bold textarea { transition-duration: var(--ai-dur-fast); }
-.s_website_form_bold .form-control:focus { transform: translateY(-1px); }
-
-/* --- Only apply hover lift on devices that can actually hover (fixes sticky hover on phones) --- */
-@media (hover: none) {
-    .s_cards_grid .card:hover, .s_three_columns .card:hover, .s_features .card:hover,
-    .s_images_wall .card:hover, .s_timeline_card:hover, .s_striped .bg-white:hover,
-    .s_numbers .col-6:hover, .btn:hover {
-        transform: none;
-    }
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
 }
 
-/* --- Respect users who prefer reduced motion --- */
+nav a {
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible { color: var(--gold); }
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+}
+
+section { margin-bottom: 3rem; }
+
+h1, h2, h3 {
+  line-height: 1.15;
+  color: var(--green);
+}
+
+h1 { font-size: clamp(2.2rem, 6vw, 4.5rem); }
+h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); }
+
+article,
+section section,
+li {
+  margin-bottom: 0.75rem;
+}
+
+article {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+p { max-width: 70ch; }
+
+a {
+  color: var(--green);
+}
+
+main > section:first-child a {
+  display: inline-block;
+  margin: 0.25rem 0.5rem 0.25rem 0;
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--green);
+  border-radius: 8px;
+  background: var(--green);
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+main > section:first-child a:last-of-type {
+  background: var(--white);
+  color: var(--green);
+}
+
+iframe {
+  border: 0;
+  border-radius: 12px;
+}
+
+footer {
+  padding: 1.5rem 1rem;
+  background: var(--green-light);
+  text-align: center;
+}
+
+footer p { margin: 0 auto; }
+
 @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after {
-        animation: none !important;
-        transition-duration: 0.01ms !important;
-    }
+  html { scroll-behavior: auto; }
 }

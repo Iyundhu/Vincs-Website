@@ -1,165 +1,40 @@
-<t t-name="website.contact">
-    <t t-call="website.layout">
-        <div id="wrap" class="oe_structure oe_empty" data-contains-ai-content="true">
-    
-    <section class="s_website_form_bold pb64 pt64 o_colored_level o_cc o_cc1" data-snippet="s_website_form_bold" data-name="Form Bold" data-contains-ai-content="true">
-        <div class="container">
-            <div class="row align-items-start">
-                <div class="col-lg-12 pb32 o_colored_level">
-                    <span class="badge rounded-pill text-bg-primary px-3 py-2 mb-2 font-monospace fw-semibold">We’re Here to Help</span>
-                    <h1 class="display-3 fw-bold mb-2">Get in Touch</h1>
-                    <p class="lead text-muted" style="max-width: 680px;">
-                        Have questions about admissions, academic programs, extracurricular activities, or campus visits? Reach out to our school administration team.
-                    </p>
-                </div>
-
-                
-                <div class="col-lg-5 pt16 o_colored_level">
-                    <div class="bg-light p-4 rounded-3 border mb-4">
-                        <h4 class="fw-bold mb-3">Campus Reception &amp;amp; Offices</h4>
-                        <div class="d-flex align-items-start gap-3 mb-3">
-                            <i class="oi oi-filled text-primary fs-5 mt-1" data-icon="location_on"/>
-                            <div>
-                                <strong>School Campus</strong>
-                                <p class="text-muted mb-0 small">Kampala Campus, Uganda</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-start gap-3 mb-3">
-                            <i class="oi oi-filled text-primary fs-5 mt-1" data-icon="alternate_email"/>
-                            <div>
-                                <strong>Direct Email</strong>
-                                <p class="text-muted mb-0 small"><a href="mailto:kennedyiyundhu@gmail.com" class="text-decoration-none">kennedyiyundhu@gmail.com</a></p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-start gap-3">
-                            <i class="oi oi-filled text-primary fs-5 mt-1" data-icon="alarm_add"/>
-                            <div>
-                                <strong>Administration Office Hours</strong>
-                                <p class="text-muted mb-0 small">Monday – Friday: 7:30 AM – 4:30 PM<br/>Saturday: 8:30 AM – 1:00 PM (Admissions Desk)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    <div class="p-3 border rounded-3">
-                        <h5 class="fw-bold mb-3 small text-uppercase text-primary">Department Enquiries</h5>
-                        <div class="mb-2 pb-2 border-bottom">
-                            <div class="fw-bold small">Admissions &amp;amp; Enrollment</div>
-                            <div class="text-muted small">Assistance with application forms, school fees, and entry interviews.</div>
-                        </div>
-                        <div class="mb-2 pb-2 border-bottom">
-                            <div class="fw-bold small">Academic &amp;amp; Student Affairs</div>
-                            <div class="text-muted small">Inquiries regarding curriculum, student progress, exams, and clubs.</div>
-                        </div>
-                        <div>
-                            <div class="fw-bold small">Sports &amp;amp; Extracurricular Office</div>
-                            <div class="text-muted small">Information about school teams, athletic galas, and educational trips.</div>
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="col-lg-7 pt16 o_colored_level">
-                    <div class="p-4 bg-white rounded-3 border shadow-sm">
-                        <h3 class="fw-bold mb-2">Send an Enquiry</h3>
-                        <p class="text-muted small mb-4">Please fill out the form below and our admissions or administrative office will respond promptly.</p>
-                        
-                        <section class="s_website_form pt0 pb0" data-vcss="001" data-snippet="s_website_form" data-name="Form">
-                            <div class="container-fluid p-0">
-                                <form action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-pre-fill="true" data-model_name="mail.mail" data-success-mode="redirect" data-success-page="/contactus-thank-you">
-                                    <div class="s_website_form_rows row s_col_no_bgcolor">
-                                        <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_dnone">
-                                            <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 160px">
-                                                    <span class="s_website_form_label_content"/>
-                                                </label>
-                                                <div class="col-sm">
-                                                    <input type="hidden" class="form-control s_website_form_input" value="kennedyiyundhu@gmail.com" id="o406e444e3e35" name="email_to"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom s_website_form_required" data-type="char">
-                                            <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 160px" for="o8e568b654ab8">
-                                                    <span class="s_website_form_label_content">Full Name</span>
-                                                    <span class="s_website_form_mark"> *</span>
-                                                </label>
-                                                <div class="col-sm">
-                                                    <input class="form-control s_website_form_input" type="text" required="1" data-fill-with="name" id="o8e568b654ab8" placeholder="Parent / Guardian or Student Name" name="Full Name"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_model_required" data-type="email">
-                                            <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 160px" for="o09d2296904b4">
-                                                    <span class="s_website_form_label_content">Email Address</span>
-                                                    <span class="s_website_form_mark"> *</span>
-                                                </label>
-                                                <div class="col-sm">
-                                                    <input class="form-control s_website_form_input" type="email" required="1" data-fill-with="email" id="o09d2296904b4" placeholder="example@email.com" name="email_from"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom" data-type="tel">
-                                            <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 160px" for="od61357cc1f57">
-                                                    <span class="s_website_form_label_content">Phone Number</span>
-                                                </label>
-                                                <div class="col-sm">
-                                                    <input class="form-control s_website_form_input" type="tel" data-fill-with="phone" id="od61357cc1f57" placeholder="Mobile / WhatsApp Number" name="Phone Number"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_model_required" data-type="char">
-                                            <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 160px" for="o57c06a52db20">
-                                                    <span class="s_website_form_label_content">Enquiry Type</span>
-                                                    <span class="s_website_form_mark"> *</span>
-                                                </label>
-                                                <div class="col-sm">
-                                                    <input class="form-control s_website_form_input" type="text" required="1" id="o57c06a52db20" placeholder="e.g. Admission Inquiry, School Visit, Fee Details" name="subject"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom s_website_form_required" data-type="text">
-                                            <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 160px" for="odd2b4338c8c9">
-                                                    <span class="s_website_form_label_content">Message</span>
-                                                    <span class="s_website_form_mark"> *</span>
-                                                </label>
-                                                <div class="col-sm">
-                                                    <textarea class="form-control s_website_form_input" required="1" id="odd2b4338c8c9" rows="4" placeholder="Tell us how we can assist you..." name="Message"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-0 py-2 col-12 s_website_form_submit text-end s_website_form_no_submit_label" data-name="Submit Button">
-                                            <div style="width: 160px;" class="s_website_form_label"/>
-                                            <span id="s_website_form_result"/>
-                                            <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send">Submit Enquiry</a>
-                                        </div>
-                                    </div>
-                                    </form>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Victors Nest Christian School</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="admission.html">Admissions</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h1>Get in Touch</h1>
+      <p>Questions about admissions, academics, activities, or campus visits are welcome.</p>
     </section>
-
-    
-    <section class="s_call_to_action o_colored_level o_cc o_cc2 pt64 pb64" data-snippet="s_call_to_action" data-name="Call to Action" data-contains-ai-content="true">
-        <div class="container text-center">
-            <h2 class="display-5 fw-bold mb-3">Planning a Visit to Our Campus?</h2>
-            <p class="lead text-muted mb-4 mx-auto" style="max-width: 650px;">
-                We encourage prospective parents and students to tour our grounds, observe classes, and meet our teachers. Walk-ins and pre-booked visits are welcome during office hours.
-            </p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="/admission" class="btn btn-primary btn-lg">Review Admissions Info</a>
-                <a href="/gallery" class="btn btn-outline-primary btn-lg">View School Facilities</a>
-            </div>
-        </div>
+    <section>
+      <h2>Campus Reception &amp; Offices</h2>
+      <p><strong>Location:</strong> Kampala Campus, Uganda</p>
+      <p><strong>Email:</strong> <a href="mailto:kennedyiyundhu@gmail.com">kennedyiyundhu@gmail.com</a></p>
+      <p><strong>Administration hours:</strong> Monday–Friday, 7:30 AM–4:30 PM</p>
+      <p>Saturday Admissions Desk: 8:30 AM–1:00 PM</p>
     </section>
-</div>
-    </t>
-</t>
+    <section>
+      <h2>Send an Enquiry</h2>
+      <p>Open your email application to send an enquiry:</p>
+      <a href="mailto:kennedyiyundhu@gmail.com?subject=School%20Enquiry">Email the School</a>
+    </section>
+  </main>
+  <footer><p>&copy; Victors Nest Christian School</p></footer>
+</body>
+</html>
